@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">,
+    <meta name="width=device-width, initial scale=1.0">
+    <title>  <title>Appointment Booking Form</title>
+    <link rel="stylesheet" href="our.css">
+</title>
+<title>cp Technologies contact page</title>
+<style>
+    header {
+        background: #35424a;
+        color: #ffffff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav {
+        margin-left: auto;
+    }
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 15px;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    .container {
+        background-color: #5cb855;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #35424a;
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    </style>
+    <header>      
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index (3).html">Contact Us</a>
+            <a href="index (4).html">book your ticket</a>
+            <a href="cmc.html">Rate Us</a>
+        </header></head>
+    <body>
+      <h1 style="text-align: center;">we welcome to our site</h1>
+      <p  style="text-align: center; font-family: Arial, Helvetica, sans-serif;"> This site gives  you a chance to make online booking appointmet to our team members.<br>This is done to avoid wastage of your time as well unncessary costs.<br>
+       This makes our work easy and we attend to you in time.</p>
+    <h2>Appointment Booking Form</h2>
+    <div class="container">
+        <h3>Book Your Appointment</h3>
+        <form id="appointment-form" method="POST" action="process.php">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Appointment Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Appointment Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="message" style="size: 100 px; margin-top: 5%;">Additional Message:</label>
+                <textarea id="message" name="message"></textarea>
+        </div> <br><button type="submit" style="align: center;">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+<ul style="color:black; text-align: center;"><b>EMPOWERING YOUR BUSINESS THROUGH WEB AND ACCOUNTING SOLUTION</b></ul>

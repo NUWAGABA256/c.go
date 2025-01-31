@@ -1,0 +1,61 @@
+body{ 
+  background-color: aqua;
+  padding: 4%;
+}
+.container{
+  width: 450px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(red, green, blue, alpha);
+}
+.form-group{
+  color: blue;
+size: 4px;
+}
+form{
+  box-sizing: inherit;
+  column-gap: 2cm;
+  border-color: antiquewhite;
+  box-shadow: inset;
+}
+label{
+  padding: 3%;
+  box-sizing: border-box;
+}
+input{
+  color: inherit;
+  width: 100%;
+  padding: 9px}
+  message{
+      padding: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Feedback</title>
+      <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1{
+        color: #333;
+        margin-top: 20px;
+      }
+      form{
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px;
+        display: inline-block;
+        margin-top: 20px;
+      }
+      p{
+        font-size: 20px;
+        color: #555;
+      }
+      label{
+        display: block;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        color: rgb(98, 0, 255);
+      }
+      input[type="radio"]{
+        margin-right: 10px;
+
+      }
+      input[type="submit"]{
+        background-color: #5cb855;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-sizinpute: 16px;
+        transition: background-color 0.3s;
+      }
+      input[type="sumit"]:hover{
+        background-color: #4cae4c;
+      }
+    </style>
+    <script>
+        function submitFeedback() {
+            // Get rating value
+            const ratingElements = document.getElementsByName('rating');
+            let rating;
+            for (let i = 0; i < ratingElements.length; i++) {
+                if (ratingElements[i].checked) {
+                    rating = ratingElements[i].value;
+                    break;
+                }
+            }
+
+            // Get feedback
+            const feedback = document.getElementById('feedback').value;
+
+            // Display thank-you message
+            const message = document.getElementById('message');
+            if (rating) {
+                message.innerHTML = `Thank you for your feedback! You rated us: ${rating}/5. Your comments: ${feedback}`;
+            } else {
+                message.innerHTML = 'Thank you for your feedback!';
+            }
+            
+            // Prevent form submission
+            return false;
+        }
+    </script>
+     <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index (3).html">Contact Us</a>
+            <a href="index (4).html">book your ticket<a/>
+                <a href="cmc.html">Rate Us</a>
+                </a>
+                </nav>
+                </header>
+</head>
+<body>
+    <h1>Rate Our Business</h1>
+    <form onsubmit="return submitFeedback();">
+        <p>Please rate our service:</p>
+        <label><input type="radio" name="rating" value="1"> 1</label><br>
+        <label><input type="radio" name="rating" value="2"> 2</label><br>
+        <label><input type="radio" name="rating" value="3"> 3</label><br>
+        <label><input type="radio" name="rating" value="4"> 4</label><br>
+        <label><input type="radio" name="rating" value="5"> 5</label><br>
+        <label><input type="radio" name="rating" value="6"> 6</label><br>
+        <input type="submit" value="submit">
+        </form>
+        </body>
+        </html>

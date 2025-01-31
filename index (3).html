@@ -1,0 +1,232 @@
+t<!DOCTYPE html>
+<html>
+  <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index3.php">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 6%;
+            padding: 2%;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            margin-left: auto;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+         background-color: #f9f9f9;   
+        }
+       label{
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"] { width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizin g: border-box;
+            font-size: 16px; }
+
+        input[type="email"]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="tel"]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+      .button{
+            width: 20%;
+            padding: 10px;
+            background-color: green;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit:hover{
+            background-color: #25D366;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CP Web Technologies</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index (3).html">Contact Us</a>
+            <a href="index (4).html">book your ticket<a/>
+                <a href="cmc.html">Rate Us</a>
+                </a>
+                </nav>
+    </header>
+        <h1>Welcome to cp Website developers contact page</h1>
+        <p style="font-family: Arial, sans-serif;
+        margin: 6%;
+        padding: 2%;
+        line-height: 1.6;
+        background-color: #f4f4f4;"> We are here to assist you with your developmet needs.
+        please feei free to fill out this
+            <h1>Contact Us</h1>
+            <form action="send_email.php" method="post">
+                <label for="name"> Your Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+        
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+        
+                <label for="subject">Subject:</label><br>
+                <select id="subject" name="subject" required>
+                    <option value="general_inquiry">General Inquiry</option>
+                    <option value="project_proposal">Project Proposal</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+                <input type="submit" value="send">
+            </form>
+            </section>
+            <script>
+                function validateForm() {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const subject = document.getElementById('subject').value;
+        
+                    if (name === "" || email === "" || phone === "" || subject === "") {
+                        alert("Please fill in all fields.");
+                        return false; // Prevent form submission
+                    }
+        
+                    submitForm();
+                    return false; // Prevent default form submission
+                }
+        
+                function submitForm() {
+                    const formData = new FormData(document.getElementById('contactForm'));
+        
+                    fetch('process_form.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('response').innerHTML = data;
+                        document.getElementById('contactForm').reset(); // Clear form fields
+                    })
+                    .catch(error => {
+                        document.getElementById('response').innerHTML = 'An error occurred. Please try again.';
+                        console.error('Error:', error);
+                    });
+                }
+            </script>
+        </p>
+        <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;">
+            <ul><ul>project timeline vary based on complexity.</ul> <ul> usually provide an estmate after the first consultation.</ul>
+        <ul>our pricing is determied ased o the services eeded.</ul><ul>Kindly cotact us for a detailed iformatio.</ul>
+       </ul> </p>
+        <div>
+     or cotact to us directly.
+     <style>
+        <p> {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .contact-container {
+            text-align: center;
+        }
+
+        .contact-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #25D366; /* WhatsApp color */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-link.email {
+            background-color: #0077b5; /* Email color */
+        }
+
+        .contact-link:hover {
+            background-color: #128C7E; /* WhatsApp hover color */
+        }
+
+        .contact-link.email:hover {
+            background-color: #005582; /* Email hover color */
+        }
+1
+        .contact-label {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    </style>
+</div>
+<p>
+<div class="contact-container">
+    <div class="contact-label">Contact Us:</div>
+    <a href="https://wa.me/256707208788" class="contact-link" target="_blank">WhatsApp: 0707208788</a>
+    <a href="mailto:cpwebtechologies@gmail.com" class="contact-link email">Email: cpwebtechnologies@gmail.com</a>
+    <ul style="color:greenyellow; text-align: center;"><b>EMPOWERING YOUR BUSINESS THROUGH WEB AND ACCOUNTING SOLUTION</b></ul>
+</p>
+</div>
+</body>
+  </html>  
+
+   
